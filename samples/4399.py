@@ -12,10 +12,12 @@ from androidemu.java.java_method_def import java_method_def
 from samples import debug_utils
 
 
+# metaclass 固定写法  jvm_name 指定类名, 把.换成/
 class GetServerApi(metaclass=JavaClassDef, jvm_name='com/m4399/framework/helpers/AppNativeHelper'):
     def __init__(self):
         pass
 
+    # name指定要执行的native方法 signature方法签名 native是否是native方法
     @java_method_def(name='getServerApi', signature='(Ljava/lang/String;)Ljava/lang/String;', native=True)
     def getServerApi(self):
         pass
